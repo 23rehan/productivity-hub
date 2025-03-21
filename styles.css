@@ -1,11 +1,18 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     background: #121212;
     color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: #fff;
+    color: #121212;
 }
 
 /* Sidebar */
@@ -30,30 +37,40 @@ body {
 
 .sidebar ul li {
     margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 18px;
 }
 
 .sidebar ul li a:hover {
     background: #ffcc00;
     color: #121212;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Main Content */
 .main-content {
     flex: 1;
     padding: 20px;
+    text-align: center;
 }
 
-/* Sections */
+/* Hidden Sections */
 .hidden {
     display: none;
 }
@@ -62,16 +79,56 @@ body {
 button {
     background: #ffcc00;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 button:hover {
     background: #e6b800;
     transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather Widget */
+#weather-section {
+    padding: 20px;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Upcoming Events */
+#events-section {
+    padding: 20px;
+    background: linear-gradient(135deg, #2a2a2a, #3e3e3e);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus Timer */
+#focus-timer-section {
+    padding: 20px;
+    background: linear-gradient(135deg, #333, #444);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Quick Notes */
+#quick-notes-section textarea {
+    width: 85%;
+    height: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Animations */

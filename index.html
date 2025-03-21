@@ -8,41 +8,95 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle-btn">🌗 Toggle Theme</button>
+
     <div class="sidebar">
-        <h2>Productivity Hub</h2>
+        <h2>🚀 Productivity Hub</h2>
         <ul>
-            <li><a href="#" id="dashboard-link">Dashboard</a></li>
-            <li><a href="#" id="tasks-link">Tasks & Goals</a></li>
-            <li><a href="#" id="budget-link">Budget Tracker</a></li>
+            <li><a href="#" id="dashboard-link">🏠 Dashboard</a></li>
+            <li><a href="#" id="tasks-link">📝 Tasks & Goals</a></li>
+            <li><a href="#" id="budget-link">💰 Budget Tracker</a></li>
+            <li><a href="#" id="weather-link">⛅ Weather</a></li>
+            <li><a href="#" id="events-link">📅 Upcoming Events</a></li>
+            <li><a href="#" id="focus-timer-link">⏳ Focus Timer</a></li>
+            <li><a href="#" id="quick-notes-link">📝 Quick Notes</a></li>
+            <li><a href="#" id="ai-tasks-link">🤖 AI Task Suggestions</a></li>
         </ul>
     </div>
-    
+
     <div class="main-content">
         <header>
-            <h1>Welcome to Your Productivity Hub</h1>
+            <h1>✨ Welcome to Your Productivity Hub ✨</h1>
         </header>
 
         <section class="dashboard">
-            <p>Here you will find all your productivity tools in one place.</p>
+            <p>Your all-in-one tool for maximum efficiency! 🚀</p>
+            <p id="motivation-quote"></p>
         </section>
 
-        <!-- Tasks & Goals Section -->
         <section id="tasks-section" class="hidden">
-            <h2>Tasks & Goals</h2>
-            <input type="text" id="task-input" placeholder="Enter a task...">
-            <button id="add-task">Add Task</button>
+            <h2>📝 Tasks & Goals</h2>
+            <input type="text" id="task-input" placeholder="Enter a task..." class="input-field">
+            <button id="add-task" class="btn">➕ Add Task</button>
             <ul id="task-list"></ul>
+            <p>Progress: <span id="task-progress">0%</span></p>
         </section>
 
-        <!-- Budget Tracker Section -->
         <section id="budget-section" class="hidden">
-            <h2>Budget Tracker</h2>
-            <input type="text" id="expense-name" placeholder="Expense name">
-            <input type="number" id="expense-amount" placeholder="Amount">
-            <button id="add-expense">Add Expense</button>
+            <h2>💰 Budget Tracker</h2>
+            <input type="text" id="expense-name" placeholder="Expense name" class="input-field">
+            <input type="number" id="expense-amount" placeholder="Amount" class="input-field">
+            <button id="add-expense" class="btn">➕ Add Expense</button>
             <ul id="expense-list"></ul>
             <h3>Total: $<span id="total-budget">0</span></h3>
         </section>
+
+        <section id="weather-section" class="hidden">
+            <h2>⛅ Weather Widget</h2>
+            <p>Location: <span id="weather-location">-</span></p>
+            <p>Temperature: <span id="weather-temp">-</span>°C</p>
+            <p>Condition: <span id="weather-condition">-</span></p>
+        </section>
+
+        <section id="events-section" class="hidden">
+            <h2>📅 Upcoming Events</h2>
+            <input type="text" id="event-input" placeholder="Enter event..." class="input-field">
+            <button id="add-event" class="btn">➕ Add Event</button>
+            <ul id="event-list"></ul>
+        </section>
+
+        <section id="focus-timer-section" class="hidden">
+            <h2>⏳ Focus Timer</h2>
+            <p>Time Left: <span id="timer-display">25:00</span></p>
+            <button id="start-timer" class="btn">▶ Start</button>
+            <button id="reset-timer" class="btn">🔄 Reset</button>
+        </section>
+
+        <section id="quick-notes-section" class="hidden">
+            <h2>📝 Quick Notes</h2>
+            <textarea id="quick-note" placeholder="Write your notes..." class="input-field"></textarea>
+            <button id="save-note" class="btn">💾 Save</button>
+        </section>
+
+        <section id="ai-tasks-section" class="hidden">
+            <h2>🤖 AI Task Suggestions</h2>
+            <p>Suggested Task: <span id="ai-task">-</span></p>
+            <button id="generate-task" class="btn">🔄 Generate New Task</button>
+        </section>
+
+        <!-- Goal & Milestone Section -->
+        <section id="goal-section" class="hidden">
+            <h2>🎯 Goal & Milestones</h2>
+            <input type="text" id="goal-input" placeholder="Enter your goal..." class="input-field">
+            <button id="set-goal" class="btn">➕ Set Goal</button>
+            <p id="goal-display"></p>
+
+            <input type="text" id="milestone-input" placeholder="Enter milestone..." class="input-field">
+            <button id="add-milestone" class="btn">➕ Add Milestone</button>
+            <ul id="milestone-list"></ul>
+        </section>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     </div>
 </body>
 </html>
