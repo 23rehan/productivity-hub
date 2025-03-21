@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Productivity Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Productivity Hub</h2>
+        <ul>
+            <li><a href="#" id="dashboard-link">Dashboard</a></li>
+            <li><a href="#" id="tasks-link">Tasks & Goals</a></li>
+            <li><a href="#" id="budget-link">Budget Tracker</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Welcome to Your Productivity Hub</h1>
+        </header>
+
+        <section class="dashboard">
+            <p>Here you will find all your productivity tools in one place.</p>
+        </section>
+
+        <!-- Tasks & Goals Section -->
+        <section id="tasks-section" class="hidden">
+            <h2>Tasks & Goals</h2>
+            <input type="text" id="task-input" placeholder="Enter a task...">
+            <button id="add-task">Add Task</button>
+            <ul id="task-list"></ul>
+        </section>
+
+        <!-- Budget Tracker Section -->
+        <section id="budget-section" class="hidden">
+            <h2>Budget Tracker</h2>
+            <input type="text" id="expense-name" placeholder="Expense name">
+            <input type="number" id="expense-amount" placeholder="Amount">
+            <button id="add-expense">Add Expense</button>
+            <ul id="expense-list"></ul>
+            <h3>Total: $<span id="total-budget">0</span></h3>
+        </section>
+    </div>
+</body>
+</html>
